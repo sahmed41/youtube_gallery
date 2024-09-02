@@ -1,6 +1,7 @@
 const YTPlayerOverlay = document.querySelector(".youtube-player-overlay");
 const YTLinks = document.querySelectorAll('.youtube-link');
 const YTPopup = document.querySelector('.youtube-player-popup iframe');
+const YTPopupCloseButton = document.querySelector('#close-button');
 
 YTLinks.forEach((link) => {
     link.addEventListener("click", () => {
@@ -13,8 +14,13 @@ YTLinks.forEach((link) => {
         let videoLink = link.dataset.link;
         YTPopup.src = videoLink;
         YTPlayerOverlay.classList.remove("active"); 
-    })
+    });
+    
+    YTPopupCloseButton.addEventListener('click', () => {
+        let videoLink = link.dataset.link;
+        YTPopup.src = videoLink;
+        YTPlayerOverlay.classList.remove("active"); 
+    });
 });
 
-// YTPlayerOverlay.addEventListener("click", () => {
-// })
+

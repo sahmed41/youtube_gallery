@@ -55,10 +55,28 @@
 
 .youtube-player-popup {
     position: fixed;
-    width: 80%;
+    width: 60%;
     left: 50%;
     transform: translate(-50%, -100%);
     transition: all 400ms ease;
+}
+
+.youtube-player-popup #title {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* width: 100%; */
+    /* height: 50px; */
+    padding: 5px;
+}
+
+.youtube-player-popup #title #close-button {
+    color: #e2e2e2;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;: 
 }
 
 .youtube-player-overlay.active .youtube-player-popup {
